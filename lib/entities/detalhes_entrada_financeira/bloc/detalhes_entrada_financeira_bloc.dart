@@ -1,16 +1,13 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
-import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_model.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:intl/intl.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_model.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_form_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 
 part 'detalhes_entrada_financeira_events.dart';
 part 'detalhes_entrada_financeira_state.dart';
@@ -98,14 +95,9 @@ class DetalhesEntradaFinanceiraBloc extends Bloc<DetalhesEntradaFinanceiraEvent,
           result = await _detalhesEntradaFinanceiraRepository.create(newDetalhesEntradaFinanceira);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

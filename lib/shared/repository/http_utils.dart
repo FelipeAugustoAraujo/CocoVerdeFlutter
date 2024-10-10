@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert' show Encoding, utf8;
 import 'dart:io';
 
-import 'package:dart_json_mapper/dart_json_mapper.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
@@ -26,16 +25,12 @@ class HttpUtils {
   static Future<Map<String, String>> headers() async {
     FlutterSecureStorage storage = new FlutterSecureStorage();
     String? jwt = await storage.read(key: HttpUtils.keyForJWTToken);
-    if (jwt != null) {
-      return {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer $jwt'
-      };
-    } else {
-      return {'Accept': 'application/json', 'Content-Type': 'application/json'};
+    return {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $jwt'
+    };
     }
-  }
 
   static Future<Response> postRequest<T>(String endpoint, T body) async {
     var headers = await HttpUtils.headers();

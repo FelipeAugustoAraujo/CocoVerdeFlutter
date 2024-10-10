@@ -3,7 +3,6 @@ import 'package:Cocoverde/account/register/bloc/register_bloc.dart';
 import 'package:Cocoverde/keys.dart';
 import 'package:Cocoverde/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
 import 'package:Cocoverde/shared/repository/http_utils.dart';
 
@@ -139,7 +138,7 @@ class RegisterScreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(right: 5),
                   ),
-                  Text('I accept the terms of use', style: Theme.of(context).textTheme.bodyText1,),
+                  Text('I accept the terms of use', style: Theme.of(context).textTheme.bodyLarge,),
                 ],
               ),
               Visibility(
@@ -147,7 +146,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 10.0),
                   child: Text('Please accept the terms and conditions',
-                    style: TextStyle(color: Theme.of(context).errorColor),
+                    style: TextStyle(color: Theme.of(context).colorScheme.error),
                   ),
                 ),
               )
@@ -167,7 +166,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Text(
                   generateError(state, context),
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Theme.of(context).errorColor),
+                  style: TextStyle(color: Theme.of(context).colorScheme.error),
                 ),
               ));
         });
@@ -229,7 +228,7 @@ class RegisterScreen extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text('Congratulation'.toUpperCase(),
-                      style: Theme.of(context).textTheme.headline1),
+                      style: Theme.of(context).textTheme.displayLarge),
                   Padding(
                     padding: EdgeInsets.only(top: 10),
                   ),

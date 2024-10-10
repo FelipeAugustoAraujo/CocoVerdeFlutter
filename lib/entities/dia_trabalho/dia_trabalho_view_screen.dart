@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/dia_trabalho/bloc/dia_trabalho_bloc.dart';
-import 'package:cocoverde/entities/dia_trabalho/dia_trabalho_model.dart';
+import 'package:Cocoverde/entities/dia_trabalho/bloc/dia_trabalho_bloc.dart';
+import 'package:Cocoverde/entities/dia_trabalho/dia_trabalho_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'dia_trabalho_route.dart';
 
 class DiaTrabalhoViewScreen extends StatelessWidget {
@@ -48,9 +48,9 @@ class DiaTrabalhoViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + diaTrabalho.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + diaTrabalho.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data : ' + (diaTrabalho.data != null ? DateFormat.yMMMMd('en').format(diaTrabalho.data!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data : ' + (diaTrabalho.data != null ? DateFormat.yMMMMd('en').format(diaTrabalho.data!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

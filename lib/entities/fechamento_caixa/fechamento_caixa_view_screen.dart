@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/fechamento_caixa/bloc/fechamento_caixa_bloc.dart';
-import 'package:cocoverde/entities/fechamento_caixa/fechamento_caixa_model.dart';
+import 'package:Cocoverde/entities/fechamento_caixa/bloc/fechamento_caixa_bloc.dart';
+import 'package:Cocoverde/entities/fechamento_caixa/fechamento_caixa_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'fechamento_caixa_route.dart';
 
 
@@ -50,22 +50,22 @@ class FechamentoCaixaViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + fechamentoCaixa.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + fechamentoCaixa.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data Inicial : ' + (fechamentoCaixa.dataInicial != null ? DateFormat.yMMMMd('en').format(fechamentoCaixa.dataInicial!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data Inicial : ' + (fechamentoCaixa.dataInicial != null ? DateFormat.yMMMMd('en').format(fechamentoCaixa.dataInicial!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data Final : ' + (fechamentoCaixa.dataFinal != null ? DateFormat.yMMMMd('en').format(fechamentoCaixa.dataFinal!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade Cocos Perdidos : ' + fechamentoCaixa.quantidadeCocosPerdidos.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade Cocos Vendidos : ' + fechamentoCaixa.quantidadeCocosVendidos.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade Coco Sobrou : ' + fechamentoCaixa.quantidadeCocoSobrou.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Dividido Por : ' + fechamentoCaixa.divididoPor.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Total Coco : ' + fechamentoCaixa.valorTotalCoco.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Total Coco Perdido : ' + fechamentoCaixa.valorTotalCocoPerdido.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Por Pessoa : ' + fechamentoCaixa.valorPorPessoa.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Despesas : ' + fechamentoCaixa.valorDespesas.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Dinheiro : ' + fechamentoCaixa.valorDinheiro.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Cartao : ' + fechamentoCaixa.valorCartao.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Total : ' + fechamentoCaixa.valorTotal.toString(), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data Final : ' + (fechamentoCaixa.dataFinal != null ? DateFormat.yMMMMd('en').format(fechamentoCaixa.dataFinal!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade Cocos Perdidos : ' + fechamentoCaixa.quantidadeCocosPerdidos.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade Cocos Vendidos : ' + fechamentoCaixa.quantidadeCocosVendidos.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade Coco Sobrou : ' + fechamentoCaixa.quantidadeCocoSobrou.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Dividido Por : ' + fechamentoCaixa.divididoPor.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Total Coco : ' + fechamentoCaixa.valorTotalCoco.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Total Coco Perdido : ' + fechamentoCaixa.valorTotalCocoPerdido.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Por Pessoa : ' + fechamentoCaixa.valorPorPessoa.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Despesas : ' + fechamentoCaixa.valorDespesas.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Dinheiro : ' + fechamentoCaixa.valorDinheiro.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Cartao : ' + fechamentoCaixa.valorCartao.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Total : ' + fechamentoCaixa.valorTotal.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

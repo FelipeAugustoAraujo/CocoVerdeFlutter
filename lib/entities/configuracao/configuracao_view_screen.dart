@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/configuracao/bloc/configuracao_bloc.dart';
-import 'package:cocoverde/entities/configuracao/configuracao_model.dart';
+import 'package:Cocoverde/entities/configuracao/bloc/configuracao_bloc.dart';
+import 'package:Cocoverde/entities/configuracao/configuracao_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'configuracao_route.dart';
 
 class ConfiguracaoViewScreen extends StatelessWidget {
@@ -47,7 +47,7 @@ class ConfiguracaoViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + configuracao.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + configuracao.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

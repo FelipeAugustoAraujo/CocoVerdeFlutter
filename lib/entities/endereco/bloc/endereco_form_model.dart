@@ -1,6 +1,4 @@
 import 'package:formz/formz.dart';
-import 'package:cocoverde/entities/endereco/endereco_model.dart';
-import 'package:time_machine/time_machine.dart';
 
 enum CepValidationError { invalid }
 class CepInput extends FormzInput<String, CepValidationError> {

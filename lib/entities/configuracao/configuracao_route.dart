@@ -1,7 +1,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/shared/models/entity_arguments.dart';
+import 'package:Cocoverde/shared/models/entity_arguments.dart';
 
 import 'bloc/configuracao_bloc.dart';
 import 'configuracao_list_screen.dart';

@@ -1,16 +1,11 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
-import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/configuracao/configuracao_model.dart';
-import 'package:cocoverde/entities/configuracao/configuracao_repository.dart';
-import 'package:cocoverde/entities/configuracao/bloc/configuracao_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:intl/intl.dart';
+import 'package:Cocoverde/entities/configuracao/configuracao_model.dart';
+import 'package:Cocoverde/entities/configuracao/configuracao_repository.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 
 part 'configuracao_events.dart';
 part 'configuracao_state.dart';
@@ -66,14 +61,9 @@ class ConfiguracaoBloc extends Bloc<ConfiguracaoEvent, ConfiguracaoState> {
           result = await _configuracaoRepository.create(newConfiguracao);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

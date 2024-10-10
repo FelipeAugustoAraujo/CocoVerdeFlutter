@@ -1,16 +1,16 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/fornecedor/bloc/fornecedor_bloc.dart';
-import 'package:cocoverde/entities/fornecedor/fornecedor_model.dart';
+import 'package:Cocoverde/entities/fornecedor/bloc/fornecedor_bloc.dart';
+import 'package:Cocoverde/entities/fornecedor/fornecedor_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'fornecedor_route.dart';
 
 
 
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
-import 'package:cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
 
 class FornecedorViewScreen extends StatelessWidget {
   FornecedorViewScreen({Key? key}) : super(key: FornecedorRoutes.createScreenKey);
@@ -61,12 +61,12 @@ class FornecedorViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + fornecedor.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Nome : ' + fornecedor.nome.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Identificador : ' + fornecedor.identificador.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Telefone : ' + fornecedor.telefone.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + fornecedor.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Nome : ' + fornecedor.nome.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Identificador : ' + fornecedor.identificador.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Telefone : ' + fornecedor.telefone.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data Cadastro : ' + (fornecedor.dataCadastro != null ? DateFormat.yMMMMd('en').format(fornecedor.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data Cadastro : ' + (fornecedor.dataCadastro != null ? DateFormat.yMMMMd('en').format(fornecedor.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

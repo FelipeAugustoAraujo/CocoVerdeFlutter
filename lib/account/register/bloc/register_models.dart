@@ -41,7 +41,7 @@ class FirstNameInput extends FormzInput<String, FirstNamevalidationError> {
 enum LastNamevalidationError { invalid }
 
 extension LastNamevalidationErrorX on LastNamevalidationError {
-  String get invalidMessage =>S.current.pageRegisterLoginValidationError(LastNameInput.numberMin);
+ 
 }
 
 class LastNameInput extends FormzInput<String, LastNamevalidationError> {

@@ -3,23 +3,23 @@ import 'package:Cocoverde/routes.dart';
 import 'package:Cocoverde/shared/widgets/drawer/bloc/drawer_bloc.dart';
 import 'package:flutter/material.dart';
 
-import 'package:cocoverde/entities/cidade/cidade_route.dart';
-import 'package:cocoverde/entities/cliente/cliente_route.dart';
-import 'package:cocoverde/entities/configuracao/configuracao_route.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_route.dart';
-import 'package:cocoverde/entities/detalhes_saida_financeira/detalhes_saida_financeira_route.dart';
-import 'package:cocoverde/entities/dia_trabalho/dia_trabalho_route.dart';
-import 'package:cocoverde/entities/endereco/endereco_route.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_route.dart';
-import 'package:cocoverde/entities/estoque/estoque_route.dart';
-import 'package:cocoverde/entities/fechamento_caixa/fechamento_caixa_route.dart';
-import 'package:cocoverde/entities/fechamento_caixa_detalhes/fechamento_caixa_detalhes_route.dart';
-import 'package:cocoverde/entities/fornecedor/fornecedor_route.dart';
-import 'package:cocoverde/entities/frente/frente_route.dart';
-import 'package:cocoverde/entities/funcionario/funcionario_route.dart';
-import 'package:cocoverde/entities/imagem/imagem_route.dart';
-import 'package:cocoverde/entities/produto/produto_route.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_route.dart';
+import 'package:Cocoverde/entities/cidade/cidade_route.dart';
+import 'package:Cocoverde/entities/cliente/cliente_route.dart';
+import 'package:Cocoverde/entities/configuracao/configuracao_route.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_route.dart';
+import 'package:Cocoverde/entities/detalhes_saida_financeira/detalhes_saida_financeira_route.dart';
+import 'package:Cocoverde/entities/dia_trabalho/dia_trabalho_route.dart';
+import 'package:Cocoverde/entities/endereco/endereco_route.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_route.dart';
+import 'package:Cocoverde/entities/estoque/estoque_route.dart';
+import 'package:Cocoverde/entities/fechamento_caixa/fechamento_caixa_route.dart';
+import 'package:Cocoverde/entities/fechamento_caixa_detalhes/fechamento_caixa_detalhes_route.dart';
+import 'package:Cocoverde/entities/fornecedor/fornecedor_route.dart';
+import 'package:Cocoverde/entities/frente/frente_route.dart';
+import 'package:Cocoverde/entities/funcionario/funcionario_route.dart';
+import 'package:Cocoverde/entities/imagem/imagem_route.dart';
+import 'package:Cocoverde/entities/produto/produto_route.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_route.dart';
 // jhipster-fredy-needle-menu-import-entry-add
 
 class CocoverdeDrawer extends StatelessWidget {
@@ -156,7 +156,7 @@ class CocoverdeDrawer extends StatelessWidget {
       ),
       child: Text('Menu',
         textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.headline2,
+        style: Theme.of(context).textTheme.displayMedium,
       ),
     );
   }

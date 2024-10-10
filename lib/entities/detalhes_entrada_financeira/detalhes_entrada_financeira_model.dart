@@ -1,5 +1,4 @@
 import 'package:dart_json_mapper/dart_json_mapper.dart';
-import 'package:time_machine/time_machine.dart';
 
 import '../produto/produto_model.dart';
 import '../entrada_financeira/entrada_financeira_model.dart';

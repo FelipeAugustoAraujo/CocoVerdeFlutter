@@ -1,11 +1,10 @@
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:formz/formz.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_model.dart';
 import 'entrada_financeira_route.dart';
 import 'package:time_machine/time_machine.dart';
 
@@ -112,7 +111,7 @@ class EntradaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('metodoPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('metodoPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<MetodoPagamento>(
                         value: state.metodoPagamento.value,
                         onChanged: (value) { context.read<EntradaFinanceiraBloc>().add(MetodoPagamentoChanged(metodoPagamento: value!)); },
@@ -131,7 +130,7 @@ class EntradaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('statusPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('statusPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<StatusPagamento>(
                         value: state.statusPagamento.value,
                         onChanged: (value) { context.read<EntradaFinanceiraBloc>().add(StatusPagamentoChanged(statusPagamento: value!)); },
@@ -150,7 +149,7 @@ class EntradaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('responsavelPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('responsavelPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<ResponsavelPagamento>(
                         value: state.responsavelPagamento.value,
                         onChanged: (value) { context.read<EntradaFinanceiraBloc>().add(ResponsavelPagamentoChanged(responsavelPagamento: value!)); },
@@ -213,16 +212,16 @@ class EntradaFinanceiraUpdateScreen extends StatelessWidget {
 
     if (state.generalNotificationKey.toString().compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong when calling the server, please try again';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     } else if (state.generalNotificationKey.toString().compareTo(HttpUtils.badRequestServerKey) == 0) {
       notificationTranslated ='Something wrong happened with the received data';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     }
 
     return Text(
       notificationTranslated,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyText1!.fontSize,
+      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
           color: notificationColors),
     );
   }

@@ -1,0 +1,14 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Loja de Água de Coco",
+  "welcomeMessage": "Bem-vindo à nossa loja!",
+  "pageRegisterLoginValidationError": "O nome deve ter pelo menos {min} caracteres.",
+  "pageRegisterLastNameValidationError": "O sobrenome deve ter pelo menos {min} caracteres.",
+  "pageRegisterMailValidationError": "Por favor, insira um endereço de e-mail válido.",
+  "pageRegisterPasswordValidationError": "A senha deve ter pelo menos {min} caracteres e incluir letras e números.",
+  "pageRegisterConfirmationPasswordValidationError": "A senha de confirmação deve corresponder à senha e ter pelo menos {min} caracteres.",
+  "pageRegisterTermsAndConditionsValidationError": "Você deve aceitar os termos e condições.",
+  "pageSettingsFirstnameErrorValidation": "O primeiro nome deve ter pelo menos {min} caracteres.",
+  "pageSettingsLastnameErrorValidation": "O sobrenome deve ter pelo menos {min} caracteres.",
+  "pageSettingsEmailErrorValidation": "Por favor, insira um endereço de e-mail válido."
+}

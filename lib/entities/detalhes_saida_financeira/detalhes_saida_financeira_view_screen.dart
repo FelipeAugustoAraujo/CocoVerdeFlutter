@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/detalhes_saida_financeira/bloc/detalhes_saida_financeira_bloc.dart';
-import 'package:cocoverde/entities/detalhes_saida_financeira/detalhes_saida_financeira_model.dart';
+import 'package:Cocoverde/entities/detalhes_saida_financeira/bloc/detalhes_saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/detalhes_saida_financeira/detalhes_saida_financeira_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'detalhes_saida_financeira_route.dart';
 
 class DetalhesSaidaFinanceiraViewScreen extends StatelessWidget {
@@ -47,9 +47,9 @@ class DetalhesSaidaFinanceiraViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + detalhesSaidaFinanceira.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade Item : ' + detalhesSaidaFinanceira.quantidadeItem.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor : ' + detalhesSaidaFinanceira.valor.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + detalhesSaidaFinanceira.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade Item : ' + detalhesSaidaFinanceira.quantidadeItem.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor : ' + detalhesSaidaFinanceira.valor.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

@@ -1,0 +1,14 @@
+{
+  "@@locale": "en",
+  "appTitle": "Coconut Water Store",
+  "welcomeMessage": "Welcome to our store!",
+  "pageRegisterLoginValidationError": "The name must be at least {min} characters long.",
+  "pageRegisterLastNameValidationError": "The last name must be at least {min} characters long.",
+  "pageRegisterMailValidationError": "Please enter a valid email address.",
+  "pageRegisterPasswordValidationError": "Password must be at least {min} characters long and include letters and numbers.",
+  "pageRegisterConfirmationPasswordValidationError": "Confirmation password must match the password and be at least {min} characters long.",
+  "pageRegisterTermsAndConditionsValidationError": "You must accept the terms and conditions.",
+  "pageSettingsFirstnameErrorValidation": "The first name must be at least {min} characters long.",
+  "pageSettingsLastnameErrorValidation": "The last name must be at least {min} characters long.",
+  "pageSettingsEmailErrorValidation": "Please enter a valid email address."
+}

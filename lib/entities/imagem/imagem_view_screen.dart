@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/imagem/bloc/imagem_bloc.dart';
-import 'package:cocoverde/entities/imagem/imagem_model.dart';
+import 'package:Cocoverde/entities/imagem/bloc/imagem_bloc.dart';
+import 'package:Cocoverde/entities/imagem/imagem_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'imagem_route.dart';
 
 
@@ -51,10 +51,10 @@ class ImagemViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + imagem.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Name : ' + imagem.name.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Content Type : ' + imagem.contentType.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Description : ' + imagem.description.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + imagem.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Name : ' + imagem.name.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Content Type : ' + imagem.contentType.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Description : ' + imagem.description.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

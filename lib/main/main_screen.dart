@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Cocoverde/account/login/login_repository.dart';
 import 'package:Cocoverde/keys.dart';
@@ -59,11 +58,11 @@ class MainScreen extends StatelessWidget {
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Current user: ' + login, style: Theme.of(context).textTheme.headline3),
+            Text('Current user: ' + name, style: Theme.of(context).textTheme.displaySmall),
             Padding(padding: EdgeInsets.symmetric(vertical: 5),),
             SizedBox(width: MediaQuery.of(context).size.width * 0.80,
                 child: Text('Welcome to your Jhipster flutter app', textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline3)),
+                    style: Theme.of(context).textTheme.displaySmall)),
           ],
         );
       }

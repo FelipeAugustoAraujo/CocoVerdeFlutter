@@ -35,8 +35,9 @@ dependencies:
 
 dependency_overrides:
   glob: 2.1.1
-  reflectable: 4.0.5
+  reflectable: 4.0.6
   intl: 0.18.1
+  intl_utils: ^2.8.7
 
 dev_dependencies:
   flutter_test:

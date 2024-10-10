@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
 import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/cliente/cliente_model.dart';
-import 'package:cocoverde/entities/cliente/cliente_repository.dart';
-import 'package:cocoverde/entities/cliente/bloc/cliente_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
+import 'package:Cocoverde/entities/cliente/cliente_model.dart';
+import 'package:Cocoverde/entities/cliente/cliente_repository.dart';
+import 'package:Cocoverde/entities/cliente/bloc/cliente_form_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'package:intl/intl.dart';
 
 part 'cliente_events.dart';
@@ -102,14 +101,9 @@ class ClienteBloc extends Bloc<ClienteEvent, ClienteState> {
           result = await _clienteRepository.create(newCliente);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

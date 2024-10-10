@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/cliente/bloc/cliente_bloc.dart';
-import 'package:cocoverde/entities/cliente/cliente_model.dart';
+import 'package:Cocoverde/entities/cliente/bloc/cliente_bloc.dart';
+import 'package:Cocoverde/entities/cliente/cliente_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'cliente_route.dart';
 
 
@@ -50,13 +50,13 @@ class ClienteViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + cliente.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Nome : ' + cliente.nome.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Data Nascimento : ' + cliente.dataNascimento.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Identificador : ' + cliente.identificador.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + cliente.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Nome : ' + cliente.nome.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Data Nascimento : ' + cliente.dataNascimento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Identificador : ' + cliente.identificador.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data Cadastro : ' + (cliente.dataCadastro != null ? DateFormat.yMMMMd('en').format(cliente.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Telefone : ' + cliente.telefone.toString(), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data Cadastro : ' + (cliente.dataCadastro != null ? DateFormat.yMMMMd('en').format(cliente.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Telefone : ' + cliente.telefone.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

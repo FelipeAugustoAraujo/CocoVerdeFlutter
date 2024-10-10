@@ -1,11 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:formz/formz.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'detalhes_entrada_financeira_route.dart';
-import 'package:time_machine/time_machine.dart';
 
 class DetalhesEntradaFinanceiraUpdateScreen extends StatelessWidget {
   DetalhesEntradaFinanceiraUpdateScreen({Key? key}) : super(key: DetalhesEntradaFinanceiraRoutes.editScreenKey);
@@ -95,16 +92,16 @@ class DetalhesEntradaFinanceiraUpdateScreen extends StatelessWidget {
 
     if (state.generalNotificationKey.toString().compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong when calling the server, please try again';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     } else if (state.generalNotificationKey.toString().compareTo(HttpUtils.badRequestServerKey) == 0) {
       notificationTranslated ='Something wrong happened with the received data';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     }
 
     return Text(
       notificationTranslated,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyText1!.fontSize,
+      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
           color: notificationColors),
     );
   }

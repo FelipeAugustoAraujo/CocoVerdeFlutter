@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ui';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
@@ -56,7 +55,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
 
         String? result = await _accountRepository.saveAccount(newCurrentUser);
 
-        if (result != null && result.compareTo(HttpUtils.successResult) != 0) {
+        if (result?.compareTo(HttpUtils.successResult) != 0) {
           yield state.copyWith(status: FormzSubmissionStatus.failure,
               generalNotificationKey: result);
         } else {

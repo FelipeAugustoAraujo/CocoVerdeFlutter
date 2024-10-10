@@ -1,5 +1,5 @@
 import 'package:formz/formz.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_model.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_model.dart';
 import 'package:time_machine/time_machine.dart';
 
 enum DataValidationError { invalid }

@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/endereco/bloc/endereco_bloc.dart';
-import 'package:cocoverde/entities/endereco/endereco_model.dart';
+import 'package:Cocoverde/entities/endereco/bloc/endereco_bloc.dart';
+import 'package:Cocoverde/entities/endereco/endereco_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'endereco_route.dart';
 
 
@@ -55,12 +55,12 @@ class EnderecoViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + endereco.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Cep : ' + endereco.cep.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Logradouro : ' + endereco.logradouro.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Numero : ' + endereco.numero.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Complemento : ' + endereco.complemento.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Bairro : ' + endereco.bairro.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + endereco.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Cep : ' + endereco.cep.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Logradouro : ' + endereco.logradouro.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Numero : ' + endereco.numero.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Complemento : ' + endereco.complemento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Bairro : ' + endereco.bairro.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

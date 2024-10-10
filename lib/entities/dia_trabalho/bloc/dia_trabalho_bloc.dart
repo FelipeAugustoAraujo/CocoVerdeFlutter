@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
 import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/dia_trabalho/dia_trabalho_model.dart';
-import 'package:cocoverde/entities/dia_trabalho/dia_trabalho_repository.dart';
-import 'package:cocoverde/entities/dia_trabalho/bloc/dia_trabalho_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
+import 'package:Cocoverde/entities/dia_trabalho/dia_trabalho_model.dart';
+import 'package:Cocoverde/entities/dia_trabalho/dia_trabalho_repository.dart';
+import 'package:Cocoverde/entities/dia_trabalho/bloc/dia_trabalho_form_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'package:intl/intl.dart';
 
 part 'dia_trabalho_events.dart';
@@ -71,14 +70,9 @@ class DiaTrabalhoBloc extends Bloc<DiaTrabalhoEvent, DiaTrabalhoState> {
           result = await _diaTrabalhoRepository.create(newDiaTrabalho);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

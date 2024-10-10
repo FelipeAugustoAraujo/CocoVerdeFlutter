@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:ui';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/widgets.dart';
 import 'package:Cocoverde/shared/models/user.dart';
 import 'package:Cocoverde/shared/repository/account_repository.dart';
 

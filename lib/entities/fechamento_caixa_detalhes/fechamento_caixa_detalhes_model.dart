@@ -1,5 +1,4 @@
 import 'package:dart_json_mapper/dart_json_mapper.dart';
-import 'package:time_machine/time_machine.dart';
 
 import '../fechamento_caixa/fechamento_caixa_model.dart';
 import '../entrada_financeira/entrada_financeira_model.dart';

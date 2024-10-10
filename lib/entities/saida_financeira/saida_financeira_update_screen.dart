@@ -1,11 +1,10 @@
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:formz/formz.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_model.dart';
 import 'saida_financeira_route.dart';
 import 'package:time_machine/time_machine.dart';
 
@@ -112,7 +111,7 @@ class SaidaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('metodoPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('metodoPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<MetodoPagamento>(
                         value: state.metodoPagamento.value,
                         onChanged: (value) { context.read<SaidaFinanceiraBloc>().add(MetodoPagamentoChanged(metodoPagamento: value!)); },
@@ -131,7 +130,7 @@ class SaidaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('statusPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('statusPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<StatusPagamento>(
                         value: state.statusPagamento.value,
                         onChanged: (value) { context.read<SaidaFinanceiraBloc>().add(StatusPagamentoChanged(statusPagamento: value!)); },
@@ -150,7 +149,7 @@ class SaidaFinanceiraUpdateScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('responsavelPagamento', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('responsavelPagamento', style: Theme.of(context).textTheme.bodyLarge,),
                     DropdownButton<ResponsavelPagamento>(
                         value: state.responsavelPagamento.value,
                         onChanged: (value) { context.read<SaidaFinanceiraBloc>().add(ResponsavelPagamentoChanged(responsavelPagamento: value!)); },
@@ -213,16 +212,16 @@ class SaidaFinanceiraUpdateScreen extends StatelessWidget {
 
     if (state.generalNotificationKey.toString().compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong when calling the server, please try again';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     } else if (state.generalNotificationKey.toString().compareTo(HttpUtils.badRequestServerKey) == 0) {
       notificationTranslated ='Something wrong happened with the received data';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     }
 
     return Text(
       notificationTranslated,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyText1!.fontSize,
+      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
           color: notificationColors),
     );
   }

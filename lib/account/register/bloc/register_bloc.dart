@@ -48,7 +48,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       User newUser = new User(state.firstName.value, state.lastName.value, state.email.value, state.password.value, 'en', null, null);
       try {
         String? result = await _accountRepository.register(newUser);
-        if (result != null && result.compareTo(HttpUtils.successResult) != 0) {
+        if (result?.compareTo(HttpUtils.successResult) != 0) {
           yield state.copyWith(status: FormzSubmissionStatus.failure, generalErrorKey: result);
         } else {
           yield state.copyWith(status: FormzSubmissionStatus.success);

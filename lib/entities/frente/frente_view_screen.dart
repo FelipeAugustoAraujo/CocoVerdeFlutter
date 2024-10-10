@@ -1,22 +1,22 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/frente/bloc/frente_bloc.dart';
-import 'package:cocoverde/entities/frente/frente_model.dart';
+import 'package:Cocoverde/entities/frente/bloc/frente_bloc.dart';
+import 'package:Cocoverde/entities/frente/frente_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'frente_route.dart';
 
-import 'package:cocoverde/entities/produto/produto_repository.dart';
-import 'package:cocoverde/entities/produto/produto_list_screen.dart';
-import 'package:cocoverde/entities/produto/bloc/produto_bloc.dart';
+import 'package:Cocoverde/entities/produto/produto_repository.dart';
+import 'package:Cocoverde/entities/produto/produto_list_screen.dart';
+import 'package:Cocoverde/entities/produto/bloc/produto_bloc.dart';
 
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
-import 'package:cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
 
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
 
 class FrenteViewScreen extends StatelessWidget {
   FrenteViewScreen({Key? key}) : super(key: FrenteRoutes.createScreenKey);
@@ -75,12 +75,12 @@ class FrenteViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + frente.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade : ' + frente.quantidade.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + frente.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade : ' + frente.quantidade.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Criado Em : ' + (frente.criadoEm != null ? DateFormat.yMMMMd('en').format(frente.criadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Criado Em : ' + (frente.criadoEm != null ? DateFormat.yMMMMd('en').format(frente.criadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Modificado Em : ' + (frente.modificadoEm != null ? DateFormat.yMMMMd('en').format(frente.modificadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Modificado Em : ' + (frente.modificadoEm != null ? DateFormat.yMMMMd('en').format(frente.modificadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

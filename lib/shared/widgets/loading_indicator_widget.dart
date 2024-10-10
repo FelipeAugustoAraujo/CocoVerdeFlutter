@@ -16,7 +16,7 @@ class LoadingIndicator extends StatelessWidget {
                 children: <Widget>[
                   CircularProgressIndicator(value: null),
                   Padding(padding: EdgeInsets.only(top: 15),),
-                Text('Loading...', style: Theme.of(context).textTheme.bodyText1,)
+                Text('Loading...', style: Theme.of(context).textTheme.bodyLarge,)
             ]),
           ),
         ),

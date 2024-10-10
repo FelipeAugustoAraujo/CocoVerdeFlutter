@@ -1,22 +1,22 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/estoque/bloc/estoque_bloc.dart';
-import 'package:cocoverde/entities/estoque/estoque_model.dart';
+import 'package:Cocoverde/entities/estoque/bloc/estoque_bloc.dart';
+import 'package:Cocoverde/entities/estoque/estoque_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'estoque_route.dart';
 
-import 'package:cocoverde/entities/produto/produto_repository.dart';
-import 'package:cocoverde/entities/produto/produto_list_screen.dart';
-import 'package:cocoverde/entities/produto/bloc/produto_bloc.dart';
+import 'package:Cocoverde/entities/produto/produto_repository.dart';
+import 'package:Cocoverde/entities/produto/produto_list_screen.dart';
+import 'package:Cocoverde/entities/produto/bloc/produto_bloc.dart';
 
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
-import 'package:cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
 
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
 
 class EstoqueViewScreen extends StatelessWidget {
   EstoqueViewScreen({Key? key}) : super(key: EstoqueRoutes.createScreenKey);
@@ -75,12 +75,12 @@ class EstoqueViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + estoque.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Quantidade : ' + estoque.quantidade.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + estoque.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Quantidade : ' + estoque.quantidade.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Criado Em : ' + (estoque.criadoEm != null ? DateFormat.yMMMMd('en').format(estoque.criadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Criado Em : ' + (estoque.criadoEm != null ? DateFormat.yMMMMd('en').format(estoque.criadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Modificado Em : ' + (estoque.modificadoEm != null ? DateFormat.yMMMMd('en').format(estoque.modificadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Modificado Em : ' + (estoque.modificadoEm != null ? DateFormat.yMMMMd('en').format(estoque.modificadoEm!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

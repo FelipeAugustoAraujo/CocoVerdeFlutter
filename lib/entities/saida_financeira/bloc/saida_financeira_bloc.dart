@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
 import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_model.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_model.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_form_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'package:intl/intl.dart';
 
 part 'saida_financeira_events.dart';
@@ -137,14 +136,9 @@ class SaidaFinanceiraBloc extends Bloc<SaidaFinanceiraEvent, SaidaFinanceiraStat
           result = await _saidaFinanceiraRepository.create(newSaidaFinanceira);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

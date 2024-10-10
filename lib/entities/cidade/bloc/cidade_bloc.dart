@@ -1,16 +1,13 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:formz/formz.dart';
-import 'package:time_machine/time_machine.dart';
 
-import 'package:cocoverde/entities/cidade/cidade_model.dart';
-import 'package:cocoverde/entities/cidade/cidade_repository.dart';
-import 'package:cocoverde/entities/cidade/bloc/cidade_form_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:intl/intl.dart';
+import 'package:Cocoverde/entities/cidade/cidade_model.dart';
+import 'package:Cocoverde/entities/cidade/cidade_repository.dart';
+import 'package:Cocoverde/entities/cidade/bloc/cidade_form_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 
 part 'cidade_events.dart';
 part 'cidade_state.dart';
@@ -86,14 +83,9 @@ class CidadeBloc extends Bloc<CidadeEvent, CidadeState> {
           result = await _cidadeRepository.create(newCidade);
         }
 
-        if (result == null) {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
-              generalNotificationKey: HttpUtils.badRequestServerKey);
-        } else {
-          yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
-              generalNotificationKey: HttpUtils.successResult);
-        }
-      } catch (e) {
+        yield this.state.copyWith(formStatus: FormzSubmissionStatus.success,
+            generalNotificationKey: HttpUtils.successResult);
+            } catch (e) {
         yield this.state.copyWith(formStatus: FormzSubmissionStatus.failure,
             generalNotificationKey: HttpUtils.errorServerKey);
       }

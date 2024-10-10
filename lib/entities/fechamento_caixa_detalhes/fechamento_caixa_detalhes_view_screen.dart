@@ -1,18 +1,18 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/fechamento_caixa_detalhes/bloc/fechamento_caixa_detalhes_bloc.dart';
-import 'package:cocoverde/entities/fechamento_caixa_detalhes/fechamento_caixa_detalhes_model.dart';
+import 'package:Cocoverde/entities/fechamento_caixa_detalhes/bloc/fechamento_caixa_detalhes_bloc.dart';
+import 'package:Cocoverde/entities/fechamento_caixa_detalhes/fechamento_caixa_detalhes_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'fechamento_caixa_detalhes_route.dart';
 
 
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
-import 'package:cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/entrada_financeira/entrada_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/entrada_financeira/bloc/entrada_financeira_bloc.dart';
 
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_repository.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
 
 class FechamentoCaixaDetalhesViewScreen extends StatelessWidget {
   FechamentoCaixaDetalhesViewScreen({Key? key}) : super(key: FechamentoCaixaDetalhesRoutes.createScreenKey);
@@ -67,7 +67,7 @@ class FechamentoCaixaDetalhesViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + fechamentoCaixaDetalhes.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + fechamentoCaixaDetalhes.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

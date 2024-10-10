@@ -17,7 +17,6 @@ class Themes {
     scaffoldBackgroundColor: Colors.white,
     fontFamily: jhFont,
     primaryColor: jhPrimaryColor,
-    errorColor: Colors.red,
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(),
       errorStyle: TextStyle(color: Colors.red),
@@ -27,14 +26,6 @@ class Themes {
         color: Colors.white,
       ),
     ),
-    colorScheme: ColorScheme.light(
-        primary: jhPrimaryColor,
-        onPrimary: Colors.white,
-        onSecondary: Colors.white,
-        //primaryVariant: jhPrimaryColorAccent,
-        secondary: jhSecondaryColor,
-        //secondaryVariant: jhSecondaryColorAccent,
-        error: Colors.red),
     cardTheme: CardTheme(
       color: Colors.white,
       elevation: 4,
@@ -49,19 +40,26 @@ class Themes {
       color: Colors.white,
     ),
     textTheme: TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
           color: Colors.black, fontSize: header1FontSize, fontWeight: FontWeight.bold),
-      headline2: TextStyle(
+      displayMedium: TextStyle(
           color: Colors.white, fontSize: header1FontSize, fontWeight: FontWeight.bold),
-      headline3: TextStyle(
+      displaySmall: TextStyle(
           color: Colors.black, fontSize: header3FontSize, fontWeight: FontWeight.bold),
-      headline4: TextStyle(
+      headlineMedium: TextStyle(
           color: Colors.white, fontSize: header3FontSize, fontWeight: FontWeight.bold),
-      bodyText1: TextStyle(color: Colors.black, fontSize: baseFontSize),
-      bodyText2: TextStyle(color: Colors.white, fontSize: baseFontSize),
-      button: TextStyle(
+      bodyLarge: TextStyle(color: Colors.black, fontSize: baseFontSize),
+      bodyMedium: TextStyle(color: Colors.white, fontSize: baseFontSize),
+      labelLarge: TextStyle(
         fontSize: baseFontSize,
       ),
-    ),
+    ), colorScheme: ColorScheme.light(
+        primary: jhPrimaryColor,
+        onPrimary: Colors.white,
+        onSecondary: Colors.white,
+        //primaryVariant: jhPrimaryColorAccent,
+        secondary: jhSecondaryColor,
+        //secondaryVariant: jhSecondaryColorAccent,
+        error: Colors.red).copyWith(error: Colors.red),
   );
 }

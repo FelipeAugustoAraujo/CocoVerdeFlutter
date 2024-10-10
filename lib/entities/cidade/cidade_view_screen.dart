@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/cidade/bloc/cidade_bloc.dart';
-import 'package:cocoverde/entities/cidade/cidade_model.dart';
+import 'package:Cocoverde/entities/cidade/bloc/cidade_bloc.dart';
+import 'package:Cocoverde/entities/cidade/cidade_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'cidade_route.dart';
 
-import 'package:cocoverde/entities/endereco/endereco_repository.dart';
-import 'package:cocoverde/entities/endereco/endereco_list_screen.dart';
-import 'package:cocoverde/entities/endereco/bloc/endereco_bloc.dart';
+import 'package:Cocoverde/entities/endereco/endereco_repository.dart';
+import 'package:Cocoverde/entities/endereco/endereco_list_screen.dart';
+import 'package:Cocoverde/entities/endereco/bloc/endereco_bloc.dart';
 
 class CidadeViewScreen extends StatelessWidget {
   CidadeViewScreen({Key? key}) : super(key: CidadeRoutes.createScreenKey);
@@ -56,9 +56,9 @@ class CidadeViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + cidade.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Nome : ' + cidade.nome.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Estado : ' + cidade.estado.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + cidade.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Nome : ' + cidade.nome.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Estado : ' + cidade.estado.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

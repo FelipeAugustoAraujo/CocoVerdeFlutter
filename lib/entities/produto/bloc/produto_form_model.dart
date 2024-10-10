@@ -1,6 +1,4 @@
 import 'package:formz/formz.dart';
-import 'package:cocoverde/entities/produto/produto_model.dart';
-import 'package:time_machine/time_machine.dart';
 
 enum NomeValidationError { invalid }
 class NomeInput extends FormzInput<String, NomeValidationError> {

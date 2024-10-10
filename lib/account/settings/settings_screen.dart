@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Cocoverde/account/login/login_repository.dart';
 import 'package:Cocoverde/account/settings/bloc/settings_bloc.dart';
 import 'package:Cocoverde/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'package:formz/formz.dart';
 import 'package:Cocoverde/shared/widgets/drawer/bloc/drawer_bloc.dart';
@@ -137,10 +135,10 @@ class SettingsScreen extends StatelessWidget {
       notificationColors = Theme.of(context).primaryColor;
     } else if(state.generalNotificationKey.compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong happended with the data';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     } else if (state.generalNotificationKey.compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong when calling the server, please try again';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     }
 
     return Text(

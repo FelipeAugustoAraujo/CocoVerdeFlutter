@@ -1,5 +1,4 @@
 import 'package:dart_json_mapper/dart_json_mapper.dart';
-import 'package:time_machine/time_machine.dart';
 
 
 @jsonSerializable

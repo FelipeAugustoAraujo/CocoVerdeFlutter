@@ -1,7 +1,6 @@
 import 'dart:convert';
-import 'package:cocoverde/entities/produto/produto_model.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:dart_json_mapper/dart_json_mapper.dart';
+import 'package:Cocoverde/entities/produto/produto_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 
 class ProdutoRepository {
     ProdutoRepository();

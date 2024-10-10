@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/funcionario/bloc/funcionario_bloc.dart';
-import 'package:cocoverde/entities/funcionario/funcionario_model.dart';
+import 'package:Cocoverde/entities/funcionario/bloc/funcionario_bloc.dart';
+import 'package:Cocoverde/entities/funcionario/funcionario_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'funcionario_route.dart';
 
 
@@ -50,14 +50,14 @@ class FuncionarioViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + funcionario.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Nome : ' + funcionario.nome.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Data Nascimento : ' + funcionario.dataNascimento.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Identificador : ' + funcionario.identificador.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Telefone : ' + funcionario.telefone.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + funcionario.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Nome : ' + funcionario.nome.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Data Nascimento : ' + funcionario.dataNascimento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Identificador : ' + funcionario.identificador.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Telefone : ' + funcionario.telefone.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data Cadastro : ' + (funcionario.dataCadastro != null ? DateFormat.yMMMMd('en').format(funcionario.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Base : ' + funcionario.valorBase.toString(), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data Cadastro : ' + (funcionario.dataCadastro != null ? DateFormat.yMMMMd('en').format(funcionario.dataCadastro!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Base : ' + funcionario.valorBase.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

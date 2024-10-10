@@ -1,5 +1,4 @@
 import 'package:formz/formz.dart';
-import 'package:cocoverde/entities/fornecedor/fornecedor_model.dart';
 import 'package:time_machine/time_machine.dart';
 
 enum NomeValidationError { invalid }

@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Cocoverde/account/login/bloc/login_bloc.dart';
 import 'package:Cocoverde/keys.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:Cocoverde/routes.dart';
 import 'package:Cocoverde/shared/repository/http_utils.dart';
@@ -92,7 +91,7 @@ class LoginScreen extends StatelessWidget {
 
   Widget register(BuildContext context) {
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.red),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
       child: Container(
           width: MediaQuery.of(context).size.width,
           height: 50,
@@ -112,7 +111,7 @@ class LoginScreen extends StatelessWidget {
               child: Center(
                 child: Text(
                   generateError(state, context),
-                  style: TextStyle(fontSize: Theme.of(context).textTheme.bodyText1!.fontSize, color: Theme.of(context).errorColor),
+                  style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize, color: Theme.of(context).colorScheme.error),
                   textAlign: TextAlign.center,
                 ),
               ));

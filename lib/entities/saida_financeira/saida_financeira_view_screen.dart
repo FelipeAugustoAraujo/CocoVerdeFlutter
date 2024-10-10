@@ -1,17 +1,17 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
-import 'package:cocoverde/entities/saida_financeira/saida_financeira_model.dart';
+import 'package:Cocoverde/entities/saida_financeira/bloc/saida_financeira_bloc.dart';
+import 'package:Cocoverde/entities/saida_financeira/saida_financeira_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'saida_financeira_route.dart';
 
 
 
 
-import 'package:cocoverde/entities/imagem/imagem_repository.dart';
-import 'package:cocoverde/entities/imagem/imagem_list_screen.dart';
-import 'package:cocoverde/entities/imagem/bloc/imagem_bloc.dart';
+import 'package:Cocoverde/entities/imagem/imagem_repository.dart';
+import 'package:Cocoverde/entities/imagem/imagem_list_screen.dart';
+import 'package:Cocoverde/entities/imagem/bloc/imagem_bloc.dart';
 
 class SaidaFinanceiraViewScreen extends StatelessWidget {
   SaidaFinanceiraViewScreen({Key? key}) : super(key: SaidaFinanceiraRoutes.createScreenKey);
@@ -63,14 +63,14 @@ class SaidaFinanceiraViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + saidaFinanceira.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + saidaFinanceira.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
                 // Instant
-              Text('Data : ' + (saidaFinanceira.data != null ? DateFormat.yMMMMd('en').format(saidaFinanceira.data!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Total : ' + saidaFinanceira.valorTotal.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Descricao : ' + saidaFinanceira.descricao.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Metodo Pagamento : ' + saidaFinanceira.metodoPagamento.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Status Pagamento : ' + saidaFinanceira.statusPagamento.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Responsavel Pagamento : ' + saidaFinanceira.responsavelPagamento.toString(), style: Theme.of(context).textTheme.bodyText1,),
+              Text('Data : ' + (saidaFinanceira.data != null ? DateFormat.yMMMMd('en').format(saidaFinanceira.data!.toDateTimeLocal()) : ''), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Total : ' + saidaFinanceira.valorTotal.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Descricao : ' + saidaFinanceira.descricao.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Metodo Pagamento : ' + saidaFinanceira.metodoPagamento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Status Pagamento : ' + saidaFinanceira.statusPagamento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Responsavel Pagamento : ' + saidaFinanceira.responsavelPagamento.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),

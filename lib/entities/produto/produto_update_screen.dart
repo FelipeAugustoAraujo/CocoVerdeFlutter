@@ -1,11 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/produto/bloc/produto_bloc.dart';
+import 'package:Cocoverde/entities/produto/bloc/produto_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:formz/formz.dart';
-import 'package:cocoverde/shared/repository/http_utils.dart';
-import 'package:cocoverde/entities/produto/produto_model.dart';
+import 'package:Cocoverde/shared/repository/http_utils.dart';
 import 'produto_route.dart';
-import 'package:time_machine/time_machine.dart';
 
 class ProdutoUpdateScreen extends StatelessWidget {
   ProdutoUpdateScreen({Key? key}) : super(key: ProdutoRoutes.editScreenKey);
@@ -109,16 +106,16 @@ class ProdutoUpdateScreen extends StatelessWidget {
 
     if (state.generalNotificationKey.toString().compareTo(HttpUtils.errorServerKey) == 0) {
       notificationTranslated ='Something wrong when calling the server, please try again';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     } else if (state.generalNotificationKey.toString().compareTo(HttpUtils.badRequestServerKey) == 0) {
       notificationTranslated ='Something wrong happened with the received data';
-      notificationColors = Theme.of(context).errorColor;
+      notificationColors = Theme.of(context).colorScheme.error;
     }
 
     return Text(
       notificationTranslated,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyText1!.fontSize,
+      style: TextStyle(fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
           color: notificationColors),
     );
   }

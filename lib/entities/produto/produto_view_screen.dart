@@ -1,15 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cocoverde/entities/produto/bloc/produto_bloc.dart';
-import 'package:cocoverde/entities/produto/produto_model.dart';
+import 'package:Cocoverde/entities/produto/bloc/produto_bloc.dart';
+import 'package:Cocoverde/entities/produto/produto_model.dart';
 import 'package:flutter/material.dart';
-import 'package:cocoverde/shared/widgets/loading_indicator_widget.dart';
+import 'package:Cocoverde/shared/widgets/loading_indicator_widget.dart';
 import 'produto_route.dart';
 
 
 
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_repository.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_list_screen.dart';
-import 'package:cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_bloc.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_repository.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/detalhes_entrada_financeira_list_screen.dart';
+import 'package:Cocoverde/entities/detalhes_entrada_financeira/bloc/detalhes_entrada_financeira_bloc.dart';
 
 
 class ProdutoViewScreen extends StatelessWidget {
@@ -62,10 +62,10 @@ class ProdutoViewScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Id : ' + produto.id.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Nome : ' + produto.nome.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Descricao : ' + produto.descricao.toString(), style: Theme.of(context).textTheme.bodyText1,),
-                Text('Valor Base : ' + produto.valorBase.toString(), style: Theme.of(context).textTheme.bodyText1,),
+            Text('Id : ' + produto.id.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Nome : ' + produto.nome.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Descricao : ' + produto.descricao.toString(), style: Theme.of(context).textTheme.bodyLarge,),
+                Text('Valor Base : ' + produto.valorBase.toString(), style: Theme.of(context).textTheme.bodyLarge,),
           ],
         ),
       ),
